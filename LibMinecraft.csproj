@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D9559483-103C-47E8-AC8A-0344F460FA0D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>LibMinecraft</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Compile Include="src\Coordinates.cs" />
+    <Compile Include="src\McBlock.cs" />
+    <Compile Include="src\McLevel.cs" />
+    <Compile Include="src\Entity\McEntity.cs" />
+    <Compile Include="src\Entity\McEntityItem.cs" />
+    <Compile Include="src\Entity\McEntityLoader.cs" />
+    <Compile Include="src\Entity\McEntityLocalPlayer.cs" />
+    <Compile Include="src\Entity\McEntityMob.cs" />
+    <Compile Include="src\Entity\McEntityType.cs" />
+    <Compile Include="src\Level\McLevelAbout.cs" />
+    <Compile Include="src\Level\McLevelEntities.cs" />
+    <Compile Include="src\Level\McLevelEnvironment.cs" />
+    <Compile Include="src\Level\McLevelMap.cs" />
+    <Compile Include="src\Level\McLevelTileEntities.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="LibNbt, Version=0.1.2.0, Culture=neutral, PublicKeyToken=null">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\libnbt\bin\LibNbt.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+  </ItemGroup>
+</Project>
