@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>8.0.50727</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{D9559483-103C-47E8-AC8A-0344F460FA0D}</ProjectGuid>
     <OutputType>Library</OutputType>
@@ -53,5 +53,12 @@
       <HintPath>..\libnbt\bin\LibNbt.dll</HintPath>
     </Reference>
     <Reference Include="System.Drawing" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Changelog" />
+    <None Include="LICENSE" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="README.txt" />
   </ItemGroup>
 </Project>
